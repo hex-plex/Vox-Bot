@@ -2396,40 +2396,40 @@
   <transmission name="f_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="f_wheel2base_joint">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="f_wheel_motor">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
 			</actuator>
 	</transmission>
   <transmission name="b_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="b_wheel2base_joint">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="b_wheel_motor">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
 			</actuator>
 	</transmission>
   <transmission name="r_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="r_wheel2base_joint">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="r_wheel_motor">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
 			</actuator>
 	</transmission>
   <transmission name="l_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="l_wheel2base_joint">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="l_wheel_motor">
-				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
 			</actuator>
 	</transmission>

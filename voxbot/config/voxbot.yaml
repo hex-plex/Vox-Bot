@@ -3,22 +3,22 @@ vox:
         type: joint_state_controller/JointStateController
         publish_rate: 100
 
-    fwheel_joint_position_controller:
-        type: effort_controllers/JointPositionController
+    fwheel_joint_velocity_controller:
+        type: velocity_controllers/JointVelocityController
         joint: f_wheel2base_joint
-        pid: {p: 0.01, i: 0.0, d: 0.0}
+        pid: {p: 1.0, i: 0.0, d: 0.0}
 
-    bwheel_joint_position_controller:
-        type: effort_controllers/JointPositionController
+    bwheel_joint_velocity_controller:
+        type: velocity_controllers/JointVelocityController
         joint: b_wheel2base_joint
-        pid: {p: 0.01, i: 0.0, d: 0.0}
+        pid: {p: 1.0, i: 0.0, d: 0.0}
 
-    rwheel_joint_position_controller:
-        type: effort_controllers/JointPositionController
+    rwheel_joint_velocity_controller:
+        type: velocity_controllers/JointVelocityController
         joint: r_wheel2base_joint
-        pid: {p: 0.01, i: 0.0, d: 0.0}
+        pid: {p: 1.0, i: 0.0, d: 0.0}
 
-    lwheel_joint_position_controller:
-        type: effort_controllers/JointPositionController
+    lwheel_joint_velocity_controller:
+        type: velocity_controllers/JointVelocityController
         joint: l_wheel2base_joint
-        pid: {p: 0.01, i: 0.0, d: 0.0 }
+        pid: {p: 1.0, i: 0.0, d: 0.0 }
