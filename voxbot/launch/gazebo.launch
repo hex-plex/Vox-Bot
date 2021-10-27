@@ -1,0 +1,33 @@
+<launch>
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <param name="robot_description" command="cat $(find voxbot)/urdf/voxbot.urdf"/>
+  <arg name="x" default="0.25"/>
+  <arg name="y" default="1"/>
+  <arg name="z" default="0.5"/>
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-urdf -param robot_description -model vox -x $(arg x) -y $(arg y) -z $(arg z)"
+    output="screen" />
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find voxbot)/config/voxbot.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="vox" args="fwheel_joint_position_controller bwheel_joint_position_controller 
+    rwheel_joint_position_controller lwheel_joint_position_controller joint_state_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/vox/joint_states" />
+  </node>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+</launch>

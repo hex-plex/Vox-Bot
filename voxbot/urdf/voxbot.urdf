@@ -1,0 +1,2442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="voxbot">
+  <link name="dummy_link" />
+  <joint
+    name="dummy_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.57 0 0" />
+    <parent
+      link="dummy_link" />
+    <child
+      link="base_link" />
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="5.5954842047713E-17 -2.4880415231743E-16 0.0221236751880611"
+        rpy="0 0 0" />
+      <mass
+        value="0.465033072874443" />
+      <inertia
+        ixx="0.000844055731999061"
+        ixy="-2.42538143674553E-08"
+        ixz="3.72165101199858E-20"
+        iyy="0.000844083998545586"
+        iyz="-8.23388506432355E-20"
+        izz="0.00164146289614022" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/chassis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/chassis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+  <joint
+    name="f_wheel2base_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.015 0.1758"
+      rpy="0 0 3.1285" />
+    <parent
+      link="base_link" />
+    <child
+      link="f_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="f_wheel_link">
+    <inertial>
+      <origin
+        xyz="-3.5404E-06 3.5401E-06 -0.0052439"
+        rpy="0 0 0" />
+      <mass
+        value="0.018672" />
+      <inertia
+        ixx="2.6095E-06"
+        ixy="-6.1814E-11"
+        ixz="-6.207E-10"
+        iyy="2.6095E-06"
+        iyz="6.2066E-10"
+        izz="4.7103E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rf1_link">
+    <inertial>
+      <origin
+        xyz="-2.08956116298786E-14 -7.07073288808147E-15 -1.83880688453542E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.32977689830744E-23"
+        ixz="4.5056874599014E-22"
+        iyy="6.38517953784484E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf12wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.024059 -0.011"
+      rpy="1.5993 0 0" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf1_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf2_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 3.46944695195361E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190226705425371" />
+      <inertia
+        ixx="3.36770317436663E-08"
+        ixy="-3.30872245021211E-24"
+        ixz="-4.84139394924374E-23"
+        iyy="6.38517953784545E-08"
+        iyz="6.24685813999412E-25"
+        izz="6.38517953784545E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf22wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 0.019464 0.001"
+      rpy="0 0 2.5133" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf2_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf3_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 0 -3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.01444899449514E-22"
+        ixz="-3.13798416557348E-24"
+        iyy="6.38517953784483E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf32wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 -1.2566" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf3_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf4_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 -3.46944695195361E-18 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-4.96308367531817E-24"
+        ixz="-9.55685784267512E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-6.06644156636463E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf42wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0228815834394101 -0.00743467714046588 0.000999999999989412"
+      rpy="0 0 1.25663706143592" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf4_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf5_link">
+    <inertial>
+      <origin
+        xyz="1.00613961606655E-16 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="7.02435672170803E-23"
+        ixz="2.18987331247339E-24"
+        iyy="6.38517953784478E-08"
+        iyz="0"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf52wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 -2.5133" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf5_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf6_link">
+    <inertial>
+      <origin
+        xyz="0.00490234790618309 -1.03632380454854E-14 -3.46944695195361E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="3.25708202340773E-42"
+        ixz="-5.15812174612274E-25"
+        iyy="6.38517953784484E-08"
+        iyz="1.28209659840628E-41"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf62wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0240591206172693 0.000999999999999848"
+      rpy="0 0 0" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf6_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf7_link">
+    <inertial>
+      <origin
+        xyz="1.37724371837566E-11 -2.77555756156289E-17 -9.29811783123569E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="-6.49128124558288E-23"
+        ixz="5.80029035073935E-24"
+        iyy="6.38517953784478E-08"
+        iyz="3.10192729707385E-25"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf72wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 2.5133" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf7_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf8_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.65436122510606E-24"
+        ixz="9.32895836211763E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-2.03103017727191E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf82wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 -0.0074347 0.001"
+      rpy="0 0 -1.2566" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf8_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf9_link">
+    <inertial>
+      <origin
+        xyz="9.62771529167128E-17 6.93889390390723E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf92wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 1.2566" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf9_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rf10_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf102wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0141415962819683 0.0194642374491161 0.000999999999989509"
+      rpy="0 0 -2.51327412287183" />
+    <parent
+      link="f_wheel_link" />
+    <child
+      link="rf10_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+  <joint
+    name="b_wheel2base_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.015 -0.1758"
+      rpy="-3.1457 0 0.0162722351660208" />
+    <parent
+      link="base_link" />
+    <child
+      link="b_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="b_wheel_link">
+    <inertial>
+      <origin
+        xyz="-3.5404E-06 3.5401E-06 -0.0052439"
+        rpy="0 0 0" />
+      <mass
+        value="0.018672" />
+      <inertia
+        ixx="2.6095E-06"
+        ixy="-6.1814E-11"
+        ixz="-6.207E-10"
+        iyy="2.6095E-06"
+        iyz="6.2066E-10"
+        izz="4.7103E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rb1_link">
+    <inertial>
+      <origin
+        xyz="-2.08956116298786E-14 -7.07073288808147E-15 -1.83880688453542E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.32977689830744E-23"
+        ixz="4.5056874599014E-22"
+        iyy="6.38517953784484E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb12wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.024059 -0.011"
+      rpy="1.5993 0 0" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb1_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb2_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 3.46944695195361E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190226705425371" />
+      <inertia
+        ixx="3.36770317436663E-08"
+        ixy="-3.30872245021211E-24"
+        ixz="-4.84139394924374E-23"
+        iyy="6.38517953784545E-08"
+        iyz="6.24685813999412E-25"
+        izz="6.38517953784545E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb22wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 0.019464 0.001"
+      rpy="0 0 2.5133" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb2_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb3_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 0 -3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.01444899449514E-22"
+        ixz="-3.13798416557348E-24"
+        iyy="6.38517953784483E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb32wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 -1.2566" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb3_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb4_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 -3.46944695195361E-18 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-4.96308367531817E-24"
+        ixz="-9.55685784267512E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-6.06644156636463E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb42wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0228815834394101 -0.00743467714046588 0.000999999999989412"
+      rpy="0 0 1.25663706143592" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb4_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb5_link">
+    <inertial>
+      <origin
+        xyz="1.00613961606655E-16 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="7.02435672170803E-23"
+        ixz="2.18987331247339E-24"
+        iyy="6.38517953784478E-08"
+        iyz="0"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb52wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 -2.5133" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb5_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb6_link">
+    <inertial>
+      <origin
+        xyz="0.00490234790618309 -1.03632380454854E-14 -3.46944695195361E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="3.25708202340773E-42"
+        ixz="-5.15812174612274E-25"
+        iyy="6.38517953784484E-08"
+        iyz="1.28209659840628E-41"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb62wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0240591206172693 0.000999999999999848"
+      rpy="0 0 0" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb6_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb7_link">
+    <inertial>
+      <origin
+        xyz="1.37724371837566E-11 -2.77555756156289E-17 -9.29811783123569E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="-6.49128124558288E-23"
+        ixz="5.80029035073935E-24"
+        iyy="6.38517953784478E-08"
+        iyz="3.10192729707385E-25"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb72wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 2.5133" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb7_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb8_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.65436122510606E-24"
+        ixz="9.32895836211763E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-2.03103017727191E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb82wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 -0.0074347 0.001"
+      rpy="0 0 -1.2566" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb8_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb9_link">
+    <inertial>
+      <origin
+        xyz="9.62771529167128E-17 6.93889390390723E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb92wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 1.2566" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb9_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rb10_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb102wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0141415962819683 0.0194642374491161 0.000999999999989509"
+      rpy="0 0 -2.51327412287183" />
+    <parent
+      link="b_wheel_link" />
+    <child
+      link="rb10_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+  <joint
+    name="r_wheel2base_joint"
+    type="continuous">
+    <origin
+      xyz="0.1758 -0.015 0"
+      rpy="-3.1416 -1.5344 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="r_wheel_link">
+    <inertial>
+      <origin
+        xyz="-3.5404E-06 3.5401E-06 -0.0052439"
+        rpy="0 0 0" />
+      <mass
+        value="0.018672" />
+      <inertia
+        ixx="2.6095E-06"
+        ixy="-6.1814E-11"
+        ixz="-6.207E-10"
+        iyy="2.6095E-06"
+        iyz="6.2066E-10"
+        izz="4.7103E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rr1_link">
+    <inertial>
+      <origin
+        xyz="-2.08956116298786E-14 -7.07073288808147E-15 -1.83880688453542E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.32977689830744E-23"
+        ixz="4.5056874599014E-22"
+        iyy="6.38517953784484E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr12wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.024059 -0.011"
+      rpy="1.5993 0 0" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr1_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr2_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 3.46944695195361E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190226705425371" />
+      <inertia
+        ixx="3.36770317436663E-08"
+        ixy="-3.30872245021211E-24"
+        ixz="-4.84139394924374E-23"
+        iyy="6.38517953784545E-08"
+        iyz="6.24685813999412E-25"
+        izz="6.38517953784545E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr22wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 0.019464 0.001"
+      rpy="0 0 2.5133" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr2_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr3_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 0 -3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.01444899449514E-22"
+        ixz="-3.13798416557348E-24"
+        iyy="6.38517953784483E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr32wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 -1.2566" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr3_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr4_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 -3.46944695195361E-18 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-4.96308367531817E-24"
+        ixz="-9.55685784267512E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-6.06644156636463E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr42wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0228815834394101 -0.00743467714046588 0.000999999999989412"
+      rpy="0 0 1.25663706143592" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr4_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr5_link">
+    <inertial>
+      <origin
+        xyz="1.00613961606655E-16 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="7.02435672170803E-23"
+        ixz="2.18987331247339E-24"
+        iyy="6.38517953784478E-08"
+        iyz="0"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr52wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 -2.5133" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr5_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr6_link">
+    <inertial>
+      <origin
+        xyz="0.00490234790618309 -1.03632380454854E-14 -3.46944695195361E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="3.25708202340773E-42"
+        ixz="-5.15812174612274E-25"
+        iyy="6.38517953784484E-08"
+        iyz="1.28209659840628E-41"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr62wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0240591206172693 0.000999999999999848"
+      rpy="0 0 0" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr6_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr7_link">
+    <inertial>
+      <origin
+        xyz="1.37724371837566E-11 -2.77555756156289E-17 -9.29811783123569E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="-6.49128124558288E-23"
+        ixz="5.80029035073935E-24"
+        iyy="6.38517953784478E-08"
+        iyz="3.10192729707385E-25"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr72wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 2.5133" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr7_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr8_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.65436122510606E-24"
+        ixz="9.32895836211763E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-2.03103017727191E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr82wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 -0.0074347 0.001"
+      rpy="0 0 -1.2566" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr8_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr9_link">
+    <inertial>
+      <origin
+        xyz="9.62771529167128E-17 6.93889390390723E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr92wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 1.2566" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr9_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rr10_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rr102wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0141415962819683 0.0194642374491161 0.000999999999989509"
+      rpy="0 0 -2.51327412287183" />
+    <parent
+      link="r_wheel_link" />
+    <child
+      link="rr10_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <!-- hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+  <joint
+    name="l_wheel2base_joint"
+    type="continuous">
+    <origin
+      xyz="-0.1758 -0.015 0"
+      rpy="-3.1416 -1.5561 -3.14" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="l_wheel_link">
+    <inertial>
+      <origin
+        xyz="-3.5404E-06 3.5401E-06 -0.0052439"
+        rpy="0 0 0" />
+      <mass
+        value="0.018672" />
+      <inertia
+        ixx="2.6095E-06"
+        ixy="-6.1814E-11"
+        ixz="-6.207E-10"
+        iyy="2.6095E-06"
+        iyz="6.2066E-10"
+        izz="4.7103E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rl1_link">
+    <inertial>
+      <origin
+        xyz="-2.08956116298786E-14 -7.07073288808147E-15 -1.83880688453542E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.32977689830744E-23"
+        ixz="4.5056874599014E-22"
+        iyy="6.38517953784484E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl12wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.024059 -0.011"
+      rpy="1.5993 0 0" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl1_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl2_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 3.46944695195361E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00190226705425371" />
+      <inertia
+        ixx="3.36770317436663E-08"
+        ixy="-3.30872245021211E-24"
+        ixz="-4.84139394924374E-23"
+        iyy="6.38517953784545E-08"
+        iyz="6.24685813999412E-25"
+        izz="6.38517953784545E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl22wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 0.019464 0.001"
+      rpy="0 0 2.5133" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl2_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl3_link">
+    <inertial>
+      <origin
+        xyz="9.8879238130678E-17 0 -3.46944695195361E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.01444899449514E-22"
+        ixz="-3.13798416557348E-24"
+        iyy="6.38517953784483E-08"
+        iyz="0"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl32wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 -1.2566" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl3_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl4_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 -3.46944695195361E-18 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-4.96308367531817E-24"
+        ixz="-9.55685784267512E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-6.06644156636463E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl42wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0228815834394101 -0.00743467714046588 0.000999999999989412"
+      rpy="0 0 1.25663706143592" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl4_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl5_link">
+    <inertial>
+      <origin
+        xyz="1.00613961606655E-16 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="7.02435672170803E-23"
+        ixz="2.18987331247339E-24"
+        iyy="6.38517953784478E-08"
+        iyz="0"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r5_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl52wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 -2.5133" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl5_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl6_link">
+    <inertial>
+      <origin
+        xyz="0.00490234790618309 -1.03632380454854E-14 -3.46944695195361E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="3.25708202340773E-42"
+        ixz="-5.15812174612274E-25"
+        iyy="6.38517953784484E-08"
+        iyz="1.28209659840628E-41"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r6_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl62wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0240591206172693 0.000999999999999848"
+      rpy="0 0 0" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl6_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl7_link">
+    <inertial>
+      <origin
+        xyz="1.37724371837566E-11 -2.77555756156289E-17 -9.29811783123569E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436529E-08"
+        ixy="-6.49128124558288E-23"
+        ixz="5.80029035073935E-24"
+        iyy="6.38517953784478E-08"
+        iyz="3.10192729707385E-25"
+        izz="6.38517953784478E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r7_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl72wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.014142 -0.019464 -0.011"
+      rpy="1.5993 0 2.5133" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl7_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl8_link">
+    <inertial>
+      <origin
+        xyz="9.71445146547012E-17 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="1.65436122510606E-24"
+        ixz="9.32895836211763E-23"
+        iyy="6.38517953784484E-08"
+        iyz="-2.03103017727191E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r8_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl82wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 -0.0074347 0.001"
+      rpy="0 0 -1.2566" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl8_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl9_link">
+    <inertial>
+      <origin
+        xyz="9.62771529167128E-17 6.93889390390723E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r9_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl92wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.022882 0.0074347 -0.011"
+      rpy="1.5993 0 1.2566" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl9_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="rl10_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019022670542537" />
+      <inertia
+        ixx="3.36770317436552E-08"
+        ixy="-9.3478735469881E-23"
+        ixz="-1.10783965916435E-24"
+        iyy="6.38517953784484E-08"
+        iyz="-2.06795153138257E-25"
+        izz="6.38517953784484E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://voxbot/meshes/r10_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl102wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0141415962819683 0.0194642374491161 0.000999999999989509"
+      rpy="0 0 -2.51327412287183" />
+    <parent
+      link="l_wheel_link" />
+    <child
+      link="rl10_link" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <!-- ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
+  <transmission name="f_wheel_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+			<joint name="f_wheel2base_joint">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="f_wheel_motor">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+	</transmission>
+  <transmission name="b_wheel_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+			<joint name="b_wheel2base_joint">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="b_wheel_motor">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+	</transmission>
+  <transmission name="r_wheel_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+			<joint name="r_wheel2base_joint">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="r_wheel_motor">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+	</transmission>
+  <transmission name="l_wheel_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+			<joint name="l_wheel2base_joint">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+			</joint>
+			<actuator name="l_wheel_motor">
+				<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+				<mechanicalReduction>1</mechanicalReduction>
+			</actuator>
+	</transmission>
+  <gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/vox</robotNamespace>
+      <!-- <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
+		</plugin>
+	</gazebo>
+</robot>
