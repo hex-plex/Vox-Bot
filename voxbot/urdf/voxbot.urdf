@@ -2396,47 +2396,51 @@
   <transmission name="f_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="f_wheel2base_joint">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="f_wheel_motor">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
 			</actuator>
 	</transmission>
   <transmission name="b_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="b_wheel2base_joint">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="b_wheel_motor">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
 			</actuator>
 	</transmission>
   <transmission name="r_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="r_wheel2base_joint">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="r_wheel_motor">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
 			</actuator>
 	</transmission>
   <transmission name="l_wheel_transmission">
       <type>transmission_interface/SimpleTransmission</type>
 			<joint name="l_wheel2base_joint">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 			</joint>
 			<actuator name="l_wheel_motor">
-				<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+				<hardwareInterface>EffortJointInterface</hardwareInterface>
 				<mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
 			</actuator>
 	</transmission>
   <gazebo>
 		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
 			<robotNamespace>/vox</robotNamespace>
-      <!-- <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType> -->
+      
 		</plugin>
 	</gazebo>
 </robot>
