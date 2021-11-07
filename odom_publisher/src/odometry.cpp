@@ -73,7 +73,7 @@ int main(int argc, char** argv)
         ros::spinOnce();
         current_time = ros::Time::now();
 
-        double dt = (current_time - last_time).toSec();
+        double dt = std::max((current_time - last_time).toSec(),0.0001);
 
         omega_b = (b_now-b_prev)/dt;
         omega_f = (f_now-f_prev)/dt;
@@ -89,7 +89,7 @@ int main(int argc, char** argv)
         vtheta = (v_r-v_l)/ wheel_separation;
         double X = cos(odom_theta)*vx - sin(odom_theta)*vy;
         double Y = sin(odom_theta)*vx + cos(odom_theta)*vy;
-        ROS_INFO("%f",X);
+        ROS_INFO("%f",odom_theta);
         odom_x += X*dt;
         odom_y += Y*dt;
 
@@ -98,7 +98,7 @@ int main(int argc, char** argv)
         geometry_msgs::TransformStamped odom_trans;
         odom_trans.header.stamp = current_time;
         odom_trans.header.frame_id = "odom";
-        odom_trans.child_frame_id = "base_link";
+        odom_trans.child_frame_id = "dummy_link";
 
         odom_trans.transform.translation.x = vx;
         odom_trans.transform.translation.y = vy;

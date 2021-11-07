@@ -2,7 +2,7 @@
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" />
 
-  
+
 
   <param name="robot_description" command="cat $(find voxbot)/urdf/voxbot.urdf"/>
   <arg name="x" default="0"/>
@@ -14,9 +14,9 @@
     type="spawn_model"
     args="-urdf -param robot_description -model vox -x $(arg x) -y $(arg y) -z $(arg z)"
     output="screen" />
-  
-  <include file="$(find vox_control)/launch/control.launch" /> 
-  
-  
-  
+
+  <include file="$(find vox_control)/launch/control.launch" />
+
+
+
 </launch>
