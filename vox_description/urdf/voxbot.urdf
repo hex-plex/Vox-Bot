@@ -38,7 +38,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/chassis_link.STL" />
+          filename="package://vox_description/meshes/chassis_link.STL" />
       </geometry>
       <material
         name="">
@@ -52,7 +52,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/chassis_link.STL" />
+          filename="package://vox_description/meshes/chassis_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -92,7 +92,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -106,7 +106,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -132,7 +132,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
       <material
         name="">
@@ -146,7 +146,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -185,7 +185,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
       <material
         name="">
@@ -199,7 +199,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -238,7 +238,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
       <material
         name="">
@@ -252,7 +252,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -291,7 +291,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
       <material
         name="">
@@ -305,7 +305,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -344,7 +344,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
       <material
         name="">
@@ -358,7 +358,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -397,7 +397,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
       <material
         name="">
@@ -411,7 +411,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -450,7 +450,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
       <material
         name="">
@@ -464,7 +464,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -503,7 +503,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
       <material
         name="">
@@ -517,7 +517,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -556,7 +556,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
       <material
         name="">
@@ -570,7 +570,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -609,7 +609,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
       <material
         name="">
@@ -623,7 +623,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -676,7 +676,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -690,7 +690,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -716,7 +716,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
       <material
         name="">
@@ -730,7 +730,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -769,7 +769,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
       <material
         name="">
@@ -783,7 +783,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -822,7 +822,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
       <material
         name="">
@@ -836,7 +836,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -875,7 +875,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
       <material
         name="">
@@ -889,7 +889,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -928,7 +928,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
       <material
         name="">
@@ -942,7 +942,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -981,7 +981,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
       <material
         name="">
@@ -995,7 +995,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1034,7 +1034,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
       <material
         name="">
@@ -1048,7 +1048,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1087,7 +1087,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
       <material
         name="">
@@ -1101,7 +1101,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1140,7 +1140,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
       <material
         name="">
@@ -1154,7 +1154,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1193,7 +1193,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
       <material
         name="">
@@ -1207,7 +1207,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1260,7 +1260,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -1274,7 +1274,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1300,7 +1300,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
       <material
         name="">
@@ -1314,7 +1314,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1353,7 +1353,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
       <material
         name="">
@@ -1367,7 +1367,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1406,7 +1406,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
       <material
         name="">
@@ -1420,7 +1420,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1459,7 +1459,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
       <material
         name="">
@@ -1473,7 +1473,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1512,7 +1512,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
       <material
         name="">
@@ -1526,7 +1526,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1565,7 +1565,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
       <material
         name="">
@@ -1579,7 +1579,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1618,7 +1618,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
       <material
         name="">
@@ -1632,7 +1632,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1671,7 +1671,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
       <material
         name="">
@@ -1685,7 +1685,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1724,7 +1724,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
       <material
         name="">
@@ -1738,7 +1738,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1777,7 +1777,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
       <material
         name="">
@@ -1791,7 +1791,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1844,7 +1844,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -1858,7 +1858,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/base_link.STL" />
+          filename="package://vox_description/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1884,7 +1884,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
       <material
         name="">
@@ -1898,7 +1898,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r1_link.STL" />
+          filename="package://vox_description/meshes/r1_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1937,7 +1937,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
       <material
         name="">
@@ -1951,7 +1951,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r2_link.STL" />
+          filename="package://vox_description/meshes/r2_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -1990,7 +1990,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
       <material
         name="">
@@ -2004,7 +2004,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r3_link.STL" />
+          filename="package://vox_description/meshes/r3_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2043,7 +2043,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
       <material
         name="">
@@ -2057,7 +2057,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r4_link.STL" />
+          filename="package://vox_description/meshes/r4_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2096,7 +2096,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
       <material
         name="">
@@ -2110,7 +2110,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r5_link.STL" />
+          filename="package://vox_description/meshes/r5_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2149,7 +2149,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
       <material
         name="">
@@ -2163,7 +2163,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r6_link.STL" />
+          filename="package://vox_description/meshes/r6_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2202,7 +2202,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
       <material
         name="">
@@ -2216,7 +2216,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r7_link.STL" />
+          filename="package://vox_description/meshes/r7_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2255,7 +2255,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
       <material
         name="">
@@ -2269,7 +2269,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r8_link.STL" />
+          filename="package://vox_description/meshes/r8_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2308,7 +2308,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
       <material
         name="">
@@ -2322,7 +2322,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r9_link.STL" />
+          filename="package://vox_description/meshes/r9_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -2361,7 +2361,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
       <material
         name="">
@@ -2375,7 +2375,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://voxbot/meshes/r10_link.STL" />
+          filename="package://vox_description/meshes/r10_link.STL" />
       </geometry>
     </collision>
   </link>

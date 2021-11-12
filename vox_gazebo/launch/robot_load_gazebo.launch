@@ -6,7 +6,7 @@
     <arg name="z" default="0.5"/>
 
     <group ns="$(arg namesp)">
-        <param name="robot_description" command="cat $(find voxbot)/urdf/voxbot.urdf"/>
+        <param name="robot_description" command="cat $(find vox_description)/urdf/voxbot.urdf"/>
     
     
 

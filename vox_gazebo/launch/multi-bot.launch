@@ -8,13 +8,13 @@
   <arg name="debug" default="false"/>
 
   <arg name="ps" default="ps1" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena1.world" 
+    <arg name="world_file" value="$(find vox_gazebo)/world/arena1.world" 
         if="$(eval arg('ps') == 'ps1')" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena2.world" 
+    <arg name="world_file" value="$(find vox_gazebo)/world/arena2.world" 
         if="$(eval arg('ps') == 'ps2')" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena3.world" 
+    <arg name="world_file" value="$(find vox_gazebo)/world/arena3.world" 
         if="$(eval arg('ps') == 'ps3')" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena4.world" 
+    <arg name="world_file" value="$(find vox_gazebo)/world/arena4.world" 
         if="$(eval arg('ps') == 'ps4')" />
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" >
@@ -25,7 +25,7 @@
     <arg name="headless" value="$(arg headless)"/>
     <arg name="debug" value="$(arg debug)"/>
   </include>
-
+<!-- 
     <include file="$(find voxbot)/launch/robot_load_gazebo.launch">
         <arg name="namesp" value="vox1"/>
         <arg name="x" value="-0.28"/>
@@ -51,6 +51,6 @@
         <arg name="z" value="0.2"/>
     </include> 
 
-  
+   -->
   <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
 </launch>

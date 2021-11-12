@@ -8,13 +8,13 @@
   <arg name="debug" default="false"/>
 
   <arg name="ps" default="ps1" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena1.world" 
+    <arg name="world_file" value="$(find vox_description)/world/arena1.world" 
         if="$(eval arg('ps') == 'ps1')" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena2.world" 
+    <arg name="world_file" value="$(find vox_description)/world/arena2.world" 
         if="$(eval arg('ps') == 'ps2')" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena3.world" 
+    <arg name="world_file" value="$(find vox_description)/world/arena3.world" 
         if="$(eval arg('ps') == 'ps3')" />
-    <arg name="world_file" value="$(find voxbot)/arenas/arena4.world" 
+    <arg name="world_file" value="$(find vox_description)/world/arena4.world" 
         if="$(eval arg('ps') == 'ps4')" />
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" >
@@ -26,7 +26,7 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
   
-  <param name="robot_description" command="cat $(find voxbot)/urdf/voxbot.urdf"/>
+  <param name="robot_description" command="cat $(find vox_description)/urdf/voxbot.urdf"/>
   <arg name="x" default="0"/>
   <arg name="y" default="0"/>
   <arg name="z" default="0"/>
