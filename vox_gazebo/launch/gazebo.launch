@@ -14,7 +14,10 @@
     type="spawn_model"
     args="-urdf -param robot_description -model vox -x $(arg x) -y $(arg y) -z $(arg z)"
     output="screen" />
-  
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/vox/joint_states" />
+  </node>
   <include file="$(find vox_control)/launch/control.launch" /> 
   
   

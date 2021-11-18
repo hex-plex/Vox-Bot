@@ -15,6 +15,7 @@
 ros::Subscriber  cmd_vel_sub;
 ros::Publisher l_pub_, r_pub_, b_pub_, f_pub_;
 
+float wheel_separation = 0.3;
 double vx=0;
 double vy=0;
 double wp=0;
@@ -57,13 +58,13 @@ int main(int argc, char** argv){
         
         double vmx= vx;
         double vmy= vy;
-        double wmp = wp ; // Body frame
+        double wmp = wp*wheel_separation ; // Body frame
         
         double v1, v2, v3, v4;
-        v1 = vmy + wmp;
-        v2 = vmx + wmp;
-        v3 = -vmy + wmp;
-        v4 = -vmx + wmp;
+        v1 = vmx - wmp;
+        v2 = vmy - wmp;
+        v3 = -vmx - wmp;
+        v4 = -vmy - wmp;
         
 
         std_msgs::Float64 wheel_vel;
