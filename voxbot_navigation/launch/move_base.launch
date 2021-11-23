@@ -4,7 +4,7 @@
 
   <arg name="odom_topic" default="odom" />
   <arg name="move_forward_only" default="false"/>
-  <!-- <include file="$(find voxbot_navigation)/launch/amcl.launch" /> -->
+  <include file="$(find voxbot_navigation)/launch/amcl.launch" />
   <include file="$(find voxbot_navigation)/launch/gmapping.launch" />
 
    <!-- <node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 map base_link 0" /> -->
