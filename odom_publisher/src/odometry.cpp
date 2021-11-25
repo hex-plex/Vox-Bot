@@ -62,7 +62,7 @@ int main(int argc, char** argv)
     ros::NodeHandle n;
     ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);
     tf::TransformBroadcaster odom_broadcaster;
-    ros::Subscriber joint_state = n.subscribe("vox/joint_states", 1, joint_state_callback);
+    ros::Subscriber joint_state = n.subscribe("joint_states", 1, joint_state_callback);
     yaw_flag=true;
     ros::Subscriber imu = n.subscribe("imu", 1, imu_callback);
 

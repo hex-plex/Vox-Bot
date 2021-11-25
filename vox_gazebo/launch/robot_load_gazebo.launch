@@ -5,15 +5,18 @@
     <arg name="y" default="0"/>
     <arg name="z" default="0.5"/>
 
-    <group ns="$(arg namesp)">
+   <group ns="$(arg namesp)">
         <param name="robot_description" command="cat $(find vox_description)/urdf/voxbot.urdf"/>
     
     
 
-        <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-          args="-urdf -param robot_description -model $(arg namesp) -x $(arg x) -y $(arg y) -z $(arg z)" />
-        <include file="$(find vox_control)/launch/multi_control.launch">
-            <arg name="namesp" value="$(arg namesp)"/>
-        </include>
+    <node name="$(arg namesp)_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param /$(arg namesp)/robot_description -model $(arg namesp) -x $(arg x) -y $(arg y) -z $(arg z)" />
+    
+        
     </group>      
+    
+    <include file="$(find vox_control)/launch/multi_control.launch">
+            <arg name="namesp" value="$(arg namesp)"/>
+    </include>
 </launch>

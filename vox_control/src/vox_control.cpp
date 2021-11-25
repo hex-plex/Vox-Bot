@@ -47,10 +47,10 @@ int main(int argc, char** argv){
     // jnt_sub = n.subscribe("joint_states", 1000, jnt_state_callback);
     // imu_sub = n.subscribe("imu/data", 100, imu_callback); // use the one with madwigk filter not this
     
-    l_pub_ = n.advertise<std_msgs::Float64>("/vox/lwheel_joint_velocity_controller/command", 10);
-    r_pub_ = n.advertise<std_msgs::Float64>("/vox/rwheel_joint_velocity_controller/command", 10);
-    b_pub_ = n.advertise<std_msgs::Float64>("/vox/bwheel_joint_velocity_controller/command", 10);
-    f_pub_ = n.advertise<std_msgs::Float64>("/vox/fwheel_joint_velocity_controller/command", 10);
+    l_pub_ = n.advertise<std_msgs::Float64>("lwheel_joint_velocity_controller/command", 10);
+    r_pub_ = n.advertise<std_msgs::Float64>("rwheel_joint_velocity_controller/command", 10);
+    b_pub_ = n.advertise<std_msgs::Float64>("bwheel_joint_velocity_controller/command", 10);
+    f_pub_ = n.advertise<std_msgs::Float64>("fwheel_joint_velocity_controller/command", 10);
     long int i = 0;
 
     while(ros::ok()){

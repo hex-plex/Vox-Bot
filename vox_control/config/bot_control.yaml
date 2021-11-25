@@ -1,42 +1,42 @@
-vox:
-    joint_state_controller:
-        type: joint_state_controller/JointStateController
-        publish_rate: 100
-    fwheel_joint_velocity_controller:
-        type: effort_controllers/JointVelocityController
-        joint: f_wheel2base_joint
-        pid: 
-            i: 0.02
-            i_clamp_max: 0.07
-            i_clamp_min: -0.07
-            p: 0.01
 
-    bwheel_joint_velocity_controller:
-        type: effort_controllers/JointVelocityController
-        joint: b_wheel2base_joint
-        pid: 
-            i: 0.02
-            i_clamp_max: 0.07
-            i_clamp_min: -0.07
-            p: 0.01
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+fwheel_joint_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: f_wheel2base_joint
+    pid: 
+        i: 0.02
+        i_clamp_max: 0.07
+        i_clamp_min: -0.07
+        p: 0.01
 
-    rwheel_joint_velocity_controller:
-        type: effort_controllers/JointVelocityController
-        joint: r_wheel2base_joint
-        pid: 
-            i: 0.02
-            i_clamp_max: 0.07
-            i_clamp_min: -0.07
-            p: 0.01
+bwheel_joint_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: b_wheel2base_joint
+    pid: 
+        i: 0.02
+        i_clamp_max: 0.07
+        i_clamp_min: -0.07
+        p: 0.01
 
-    lwheel_joint_velocity_controller:
-        type: effort_controllers/JointVelocityController
-        joint: l_wheel2base_joint
-        pid: 
-            i: 0.02
-            i_clamp_max: 0.07
-            i_clamp_min: -0.07
-            p: 0.01
+rwheel_joint_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: r_wheel2base_joint
+    pid: 
+        i: 0.02
+        i_clamp_max: 0.07
+        i_clamp_min: -0.07
+        p: 0.01
+
+lwheel_joint_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: l_wheel2base_joint
+    pid: 
+        i: 0.02
+        i_clamp_max: 0.07
+        i_clamp_min: -0.07
+        p: 0.01
 
 
 
