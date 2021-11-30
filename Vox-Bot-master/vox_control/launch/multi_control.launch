@@ -1,0 +1,26 @@
+<launch>
+  <arg name="namesp" default="vox"/>
+  <group ns="$(arg namesp)">
+ <param name="tf_prefix" value="$(arg namesp)"/>
+  <!-- <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 100" /> -->
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+    <rosparam file="$(find vox_control)/config/bot_control.yaml" command="load"/>
+
+    <!-- load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+     output="screen" args="joint_state_controller fwheel_joint_velocity_controller bwheel_joint_velocity_controller 
+      rwheel_joint_velocity_controller lwheel_joint_velocity_controller "/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+     respawn="false" output="screen" />
+    <node name="vox_control" pkg="vox_control" type="vox_control" output="screen"/>
+<node name="$(arg namesp)_vox_odom" pkg="vox_odom" type="$(arg namesp)_odom_publisher"/>
+  
+  </group>
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+  <!-- <node name="dot_omni_control" pkg="dot_control" type="omnidrive" output="screen" ns="dot"/> -->
+</launch>

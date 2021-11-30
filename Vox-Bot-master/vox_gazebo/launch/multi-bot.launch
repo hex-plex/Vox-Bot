@@ -1,0 +1,36 @@
+<launch>
+    <!-- Gazebo parameters -->
+    <arg name="ps" default="ps1" />
+    <include
+        file="$(find vox_gazebo)/launch/world.launch">
+        <arg name="ps" value="$(arg ps)"/>
+    </include>
+
+    <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
+        <arg name="namesp" value="vox1"/>
+        <arg name="x" value="0.0"/>
+        <arg name="y" value="-1.2"/>
+        <arg name="z" value="0.2"/>
+    </include> 
+    <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
+        <arg name="namesp" value="vox2"/>
+        <arg name="x" value="0.0"/>
+        <arg name="y" value="-0.6"/>
+        <arg name="z" value="0.2"/>
+    </include> 
+    <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
+        <arg name="namesp" value="vox3"/>
+        <arg name="x" value="0.0"/>
+        <arg name="y" value="0.6"/>
+        <arg name="z" value="0.2"/>
+    </include> 
+    <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
+        <arg name="namesp" value="vox4"/>
+        <arg name="x" value="0"/>
+        <arg name="y" value="1.2"/>
+        <arg name="z" value="0.2"/>
+    </include> 
+
+  
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+</launch>
