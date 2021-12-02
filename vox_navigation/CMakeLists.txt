@@ -9,7 +9,7 @@ project(vox_navigation)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   move_base
-  odom_publisher
+  vox_odom
 )
 
 ## System dependencies are found with CMake's conventions

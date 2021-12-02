@@ -59,7 +59,8 @@ void imu_callback(const sensor_msgs::Imu::ConstPtr& msg)
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "odometry_publisher");
-    ros::NodeHandle n;
+    ros::NodeHandle n("");
+    std::string ns = ros::this_node::getNamespace();
     ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);
     tf::TransformBroadcaster odom_broadcaster;
     ros::Subscriber joint_state = n.subscribe("joint_states", 1, joint_state_callback);
@@ -104,8 +105,8 @@ int main(int argc, char** argv)
 
         geometry_msgs::TransformStamped odom_trans;
         odom_trans.header.stamp = current_time;
-        odom_trans.header.frame_id = "odom";
-        odom_trans.child_frame_id = "dummy_link";
+        odom_trans.header.frame_id = ns + "/odom";
+        odom_trans.child_frame_id = ns + "/dummy_link";
 
         odom_trans.transform.translation.x = odom_x;
         odom_trans.transform.translation.y = odom_y;
@@ -116,14 +117,14 @@ int main(int argc, char** argv)
 
         nav_msgs::Odometry odom;
         odom.header.stamp = current_time;
-        odom.header.frame_id = "odom";
+        odom.header.frame_id = ns + "/odom";
 
         odom.pose.pose.position.x = odom_x;
         odom.pose.pose.position.y = odom_y;
         odom.pose.pose.position.z = 0.0;
         odom.pose.pose.orientation = odom_quat;
 
-        odom.child_frame_id = "dummy_link";
+        odom.child_frame_id = ns + "/dummy_link";
         odom.twist.twist.linear.x = vx;
         odom.twist.twist.linear.y = vy;
         odom.twist.twist.angular.z = vtheta;

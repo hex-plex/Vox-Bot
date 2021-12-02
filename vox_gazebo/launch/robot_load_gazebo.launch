@@ -16,7 +16,7 @@
         
     </group>      
     
-    <include file="$(find vox_control)/launch/multi_control.launch">
+    <include file="$(find vox_control)/launch/control.launch">
             <arg name="namesp" value="$(arg namesp)"/>
     </include>
 </launch>

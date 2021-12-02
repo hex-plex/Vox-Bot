@@ -1,6 +1,7 @@
 <launch>
   <arg name="namesp" default="vox"/>
   <group ns="$(arg namesp)">
+  <param name="tf_prefix" value="$(arg namesp)"/>
   <!-- <node
     name="tf_footprint_base"
     pkg="tf"
