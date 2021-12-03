@@ -68,10 +68,10 @@ if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
 
     rospy.init_node('vel_Publisher')
-    pubf = rospy.Publisher('/vox/fwheel_joint_velocity_controller/command', Float64, queue_size=1)
-    pubb = rospy.Publisher('/vox/bwheel_joint_velocity_controller/command', Float64, queue_size=1)
-    pubr = rospy.Publisher('/vox/rwheel_joint_velocity_controller/command', Float64, queue_size=1)
-    publ = rospy.Publisher('/vox/lwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    pubf = rospy.Publisher('fwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    pubb = rospy.Publisher('bwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    pubr = rospy.Publisher('rwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    publ = rospy.Publisher('lwheel_joint_velocity_controller/command', Float64, queue_size=1)
 
 
     speed = 1.0
