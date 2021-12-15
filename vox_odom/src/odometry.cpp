@@ -41,7 +41,7 @@ void joint_state_callback(const sensor_msgs::JointState::ConstPtr& input)
        omega_f=input->velocity[1];
        omega_l=input->velocity[2];
        omega_r=input->velocity[3];
-    }
+}
 
 void imu_callback(const sensor_msgs::Imu::ConstPtr& msg)
 {

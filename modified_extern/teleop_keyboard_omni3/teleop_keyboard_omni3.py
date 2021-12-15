@@ -5,6 +5,7 @@ from __future__ import print_function
 import rospy
 
 from std_msgs.msg import Float64
+from geometry_msgs.msg import Twist 
 
 import sys, select, termios, tty
 
@@ -68,11 +69,11 @@ if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
 
     rospy.init_node('vel_Publisher')
-    pubf = rospy.Publisher('fwheel_joint_velocity_controller/command', Float64, queue_size=1)
-    pubb = rospy.Publisher('bwheel_joint_velocity_controller/command', Float64, queue_size=1)
-    pubr = rospy.Publisher('rwheel_joint_velocity_controller/command', Float64, queue_size=1)
-    publ = rospy.Publisher('lwheel_joint_velocity_controller/command', Float64, queue_size=1)
-
+    # pubf = rospy.Publisher('fwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    # pubb = rospy.Publisher('bwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    # pubr = rospy.Publisher('rwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    # publ = rospy.Publisher('lwheel_joint_velocity_controller/command', Float64, queue_size=1)
+    pub_vel = rospy.Publisher('cmd_vel', Twist, queue_size=1)
 
     speed = 1.0
     x = 0
@@ -104,38 +105,42 @@ if __name__=="__main__":
                 if (key == '\x03'):
                     break
 
-            velf = Float64()
-            vell = Float64()
-            velb = Float64()
-            velr = Float64()
-
-            velf = y*speed + z*speed
-            vell = x*speed + z*speed
-            velb = -y*speed + z*speed
-            velr = -x*speed + z*speed
-
-            pubf.publish(velf)
-            publ.publish(vell)
-            pubb.publish(velb)
-            pubr.publish(velr)
-
+            # velf = Float64()
+            # vell = Float64()
+            # velb = Float64()
+            # velr = Float64()
+            cmd_vel = Twist()
+            # velf = y*speed + z*speed
+            # vell = x*speed + z*speed
+            # velb = -y*speed + z*speed
+            # velr = -x*speed + z*speed
+            cmd_vel.linear.x = x
+            cmd_vel.linear.y = y
+            cmd_vel.angular.z = z
+            # pubf.publish(velf)
+            # publ.publish(vell)
+            # pubb.publish(velb)
+            # pubr.publish(velr)
+            pub_vel.publish(cmd_vel)
     except Exception as e:
         print(e)
 
     finally:
-        velf = Float64()
-        vell = Float64()
-        velb = Float64()
-        velr = Float64()
+        # velf = Float64()
+        # vell = Float64()
+        # velb = Float64()
+        # velr = Float64()
 	
-        velf = 0.0
-        vell = 0.0
-        velb = 0.0
-        velr = 0.0
+        # velf = 0.0
+        # vell = 0.0
+        # velb = 0.0
+        # velr = 0.0
 
-        pubf.publish(velf)
-        pubb.publish(velb)
-        publ.publish(vell)
-        pubr.publish(velr)
+        # pubf.publish(velf)
+        # pubb.publish(velb)
+        # publ.publish(vell)
+        # pubr.publish(velr)
+        cmd_vel = Twist()
+        pub_vel.publish(cmd_vel)
 
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)

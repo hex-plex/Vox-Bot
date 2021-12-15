@@ -1,0 +1,18 @@
+<launch>
+    <!--Final launch file with statemachine solution navstack and sim-->
+    <arg name="ps" default="ps1" />
+    <arg name="num_bot" default="3" />
+    <include file="$(find vox_gazebo)/launch/multi-bot.launch">
+        <arg name="ps" value="$(arg ps)"/>
+        <arg name="num_bot" value="$(arg num_bot)"/>
+    </include>
+
+    <include file="$(find vox_navigation)/launch/multi_gmapping.launch">
+        <arg name="num_bot" value="$(arg num_bot)"/>
+    </include>
+    <include file="$(find multirobot_map_merge)/launch/map_merge.launch" />
+    <include file="$(find rrt_exploration)/launch/n_robots.launch">
+        <arg name="num_bot" value="$(arg num_bot)"/>
+    </include>
+</launch>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="num_bot" default="3" />
+
+    <include file="$(find vox_navigation)/launch/move_base.launch">
+        <arg name="namesp" value="vox_1"/>
+    </include>
+    <include file="$(find vox_navigation)/launch/move_base.launch">
+        <arg name="namesp" value="vox_2"/>
+    </include>
+    <include file="$(find vox_navigation)/launch/move_base.launch">
+        <arg name="namesp" value="vox_3"/>
+    </include>
+    <group if="$(eval arg('num_bot')>3)">
+        <include file="$(find vox_navigation)/launch/move_base.launch">
+            <arg name="namesp" value="vox_4"/>
+        </include>
+    </group>
+    <group if="$(eval arg('num_bot')>4)">
+        <include file="$(find vox_navigation)/launch/move_base.launch">
+            <arg name="namesp" value="vox_5"/>
+        </include>
+    </group>
+</launch>

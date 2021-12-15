@@ -1,36 +1,38 @@
 <launch>
     <!-- Gazebo parameters -->
     <arg name="ps" default="ps1" />
+    <arg name="num_bot" default="3" />
     <include
         file="$(find vox_gazebo)/launch/world.launch">
         <arg name="ps" value="$(arg ps)"/>
     </include>
+    <param name="num_bot" value="$(arg num_bot)" />
+    <rosparam command="load" file="$(find vox_config)/config/$(arg ps)/$(arg num_bot)_bot_pos.yaml" />
 
-    <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
-        <arg name="namesp" value="vox1"/>
+    <!-- <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
+        <arg name="namesp" value="vox_1"/>
         <arg name="x" value="0.0"/>
         <arg name="y" value="-1.2"/>
         <arg name="z" value="0.2"/>
     </include> 
     <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
-        <arg name="namesp" value="vox2"/>
+        <arg name="namesp" value="vox_2"/>
         <arg name="x" value="0.0"/>
         <arg name="y" value="-0.6"/>
         <arg name="z" value="0.2"/>
     </include> 
     <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
-        <arg name="namesp" value="vox3"/>
+        <arg name="namesp" value="vox_3"/>
         <arg name="x" value="0.0"/>
         <arg name="y" value="0.6"/>
         <arg name="z" value="0.2"/>
     </include> 
     <include file="$(find vox_gazebo)/launch/robot_load_gazebo.launch">
-        <arg name="namesp" value="vox4"/>
+        <arg name="namesp" value="vox_4"/>
         <arg name="x" value="0"/>
         <arg name="y" value="1.2"/>
         <arg name="z" value="0.2"/>
-    </include> 
+    </include>  -->
+    <node pkg="vox_gazebo" type="multi_robot_param_helper.py" name="util_spawner"/>
 
-  
-  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
 </launch>
