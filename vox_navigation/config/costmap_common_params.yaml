@@ -9,4 +9,4 @@ cost_scaling_factor: 3.0
 
 map_type: costmap
 observation_sources: scan
-scan: {sensor_frame: vox1/sensor_link, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+scan: {sensor_frame: sensor_link, data_type: LaserScan, topic: scan, marking: true, clearing: true}

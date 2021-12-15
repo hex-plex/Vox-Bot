@@ -2,6 +2,7 @@
     <!--Final launch file with statemachine solution navstack and sim-->
     <arg name="ps" default="ps1" />
     <arg name="num_bot" default="3" />
+    <arg name="rviz" default="true" />
     <include file="$(find vox_gazebo)/launch/multi-bot.launch">
         <arg name="ps" value="$(arg ps)"/>
         <arg name="num_bot" value="$(arg num_bot)"/>
@@ -14,5 +15,7 @@
     <include file="$(find rrt_exploration)/launch/n_robots.launch">
         <arg name="num_bot" value="$(arg num_bot)"/>
     </include>
+    <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz"
+        args="-d $(find vox_config)/rviz_viz_rtt.rviz" output="screen"/>
 </launch>
 

@@ -27,13 +27,15 @@
       <rosparam file="$(find vox_navigation)/config/teb_local_planner_params.yaml" command="load" />
       <param name="global_costmap/global_frame" value="$(arg namesp)/map"/>
       <param name="global_costmap/robot_base_frame" value="$(arg namesp)/dummy_link"/>
-      <param name="global_costmap/laser_scan_sensor/sensor_frame" value="/$(arg namesp)/sensor_link"/>
-      <param name="global_costmap/laser_scan_sensor/topic" value="/$(arg namesp)/scan"/>    
+      <param name="global_costmap/scan/sensor_frame" value="$(arg namesp)/sensor_link"/>
+      <param name="global_costmap/scan/topic" value="/$(arg namesp)/scan"/>    
       <param name="local_costmap/global_frame" value="$(arg namesp)/odom"/>
-      <param name="local_costmap/robot_base_frame" value="$(arg namesp)/base_link"/>
-      <param name="local_costmap/laser_scan_sensor/sensor_frame" value="$(arg namesp)/base_laser_link"/>
-      <param name="local_costmap/laser_scan_sensor/topic" value="/$(arg namesp)/scan"/>
-      <param name="local_costmap/obstacle_layer/laser_scan_sensor/topic" value="/$(arg namesp)/scan"/>
+      <param name="local_costmap/robot_base_frame" value="$(arg namesp)/dummy_link"/>
+      <param name="local_costmap/scan/sensor_frame" value="$(arg namesp)/sensor_link"/>
+      <param name="local_costmap/scan/topic" value="/$(arg namesp)/scan"/>
+      <param name="local_costmap/obstacle_layer/sensor/topic" value="/$(arg namesp)/scan"/>
+      <param name="TebLocalPlannerROS/odom_topic" value="/$(arg namesp)/odom"/>
+      <param name="TebLocalPlannerROS/map_frame" value="$(arg namesp)/map"/>
       <remap from="odom" to="$(arg odom_topic)"/>
     </node>
   </group>
