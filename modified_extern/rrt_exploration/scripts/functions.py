@@ -20,9 +20,9 @@ class robot:
         self.assigned_point = []
         self.name = name
         self.global_frame = rospy.get_param('~global_frame', '/map')
-        self.robot_frame = rospy.get_param('~robot_frame', 'base_link')
+        self.robot_frame = rospy.get_param('~robot_frame', 'dummy_link')
         self.plan_service = rospy.get_param(
-            '~plan_service', '/move_base_node/NavfnROS/make_plan')
+            '~plan_service', '/move_base/NavfnROS/make_plan')
         self.listener = tf.TransformListener()
         self.listener.waitForTransform(
             self.global_frame, self.name+'/'+self.robot_frame, rospy.Time(0), rospy.Duration(10.0))
@@ -80,6 +80,8 @@ class robot:
         robot.start.pose.position.y = start[1]
         robot.end.pose.position.x = end[0]
         robot.end.pose.position.y = end[1]
+        robot.start.header.stamp = rospy.Time.now()
+        robot.end.header.stamp = rospy.Time.now()
         start = self.listener.transformPose(self.name+'/map', robot.start)
         end = self.listener.transformPose(self.name+'/map', robot.end)
         plan = self.make_plan(start=start, goal=end, tolerance=0.0)
@@ -207,7 +209,7 @@ def gridValue(mapData, Xp):
     index = (floor((Xp[1]-Xstarty)/resolution)*width) + \
         (floor((Xp[0]-Xstartx)/resolution))
 
-    if int(index) < len(Data):
+    if 0<= int(index) < len(Data):
         return Data[int(index)]
     else:
         return 100

@@ -62,10 +62,10 @@ def node():
     namespace_init_count = rospy.get_param('namespace_init_count', 1)
     rateHz = rospy.get_param('~rate', 100)
     global_costmap_topic = rospy.get_param(
-        '~global_costmap_topic', '/move_base_node/global_costmap/costmap')
+        '~global_costmap_topic', '/move_base/global_costmap/costmap')
     robot_frame = rospy.get_param('~robot_frame', 'base_link')
 
-    litraIndx = len(namespace)
+    litraIndx = len(namespace)+1
     rate = rospy.Rate(rateHz)
 # -------------------------------------------
     rospy.Subscriber(map_topic, OccupancyGrid, mapCallBack)
@@ -100,15 +100,15 @@ def node():
     tfLisn = tf.TransformListener()
     if len(namespace) > 0:
         for i in range(0, n_robots):
-            tfLisn.waitForTransform(global_frame[1:], namespace+str(
+            tfLisn.waitForTransform(global_frame, namespace+str(
                 i+namespace_init_count)+'/'+robot_frame, rospy.Time(0), rospy.Duration(10.0))
     elif len(namespace) == 0:
         tfLisn.waitForTransform(
-            global_frame[1:], '/'+robot_frame, rospy.Time(0), rospy.Duration(10.0))
+            global_frame, robot_frame, rospy.Time(0), rospy.Duration(10.0))
             # global_frame[1:], robot_frame, rospy.Time(0), rospy.Duration(10.0))
 
     rospy.Subscriber(goals_topic, PointStamped, callback=callBack,
-                     callback_args=[tfLisn, global_frame[1:]])
+                     callback_args=[tfLisn, global_frame])
     pub = rospy.Publisher('frontiers', Marker, queue_size=10)
     pub2 = rospy.Publisher('centroids', Marker, queue_size=10)
     filterpub = rospy.Publisher('filtered_points', PointArray, queue_size=10)

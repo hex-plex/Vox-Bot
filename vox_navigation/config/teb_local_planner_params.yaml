@@ -65,11 +65,11 @@ TebLocalPlannerROS:
  max_vel_x_backwards: 200.0
  max_vel_y: 200.0
  max_vel_y_backwards: 200.0
- max_vel_theta: 10.0
+ max_vel_theta: 0.0
  acc_lim_x: 50.0
  acc_lim_y: 50.0
- acc_lim_theta: 50.0
- min_turning_radius: 5.0
+ acc_lim_theta: 10.0
+ min_turning_radius: 0.0
  footprint_model: # types: "point", "circular", "two_circles", "line", "polygon"
    type: "polygon"
   #  radius: 0.2 # for type "circular"
@@ -105,10 +105,12 @@ TebLocalPlannerROS:
  optimization_verbose: False
  penalty_epsilon: 0.1
  weight_max_vel_x: 2
+ weight_max_vel_y: 2
  weight_max_vel_theta: 1
  weight_acc_lim_x: 1
+ weight_acc_lim_y: 1
  weight_acc_lim_theta: 1
- weight_kinematics_nh: 1000
+ weight_kinematics_nh: 1
  weight_kinematics_forward_drive: 1
  weight_kinematics_turning_radius: 1
  weight_optimaltime: 1

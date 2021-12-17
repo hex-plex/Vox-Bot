@@ -40,7 +40,7 @@ def main():
     fx = 0
     fy = 0
     fY = 0
-    fname=0
+    fname="world"
     for i in range(1, int(n_b)+1):
                    
         bot_x = rospy.get_param("/vox_{0}/map_merge/init_pose_x".format(i))
@@ -48,14 +48,12 @@ def main():
         bot_z = rospy.get_param("/vox_{0}/map_merge/init_pose_z".format(i))
         bot_Y = rospy.get_param("/vox_{0}/map_merge/init_pose_yaw".format(i))
         bot_name = "vox_{0}".format(i)
+        spawn_bot(bot_name, bot_x, bot_y, bot_z, bot_Y, True, fx, fy, fY, fname)
         if i == 1:
             fx = bot_x
             fy = bot_y
             fY = bot_Y
             fname = bot_name
-            spawn_bot(bot_name, bot_x, bot_y, bot_z, bot_Y)
-        else:
-            spawn_bot(bot_name, bot_x, bot_y, bot_z, bot_Y, True, fx, fy, fY, fname)
 
     rospy.spin()
 
