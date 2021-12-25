@@ -110,7 +110,7 @@ The zoomed-in image of the flow clearly depicts that our exhausts are also worki
 	</td>
     <td align="center">
      <a href="https://github.com/GeneralVader">
-    <img src="https://avatars.githubusercontent.com/u/77744383?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Aryaman Gupta</b></sub></a><br />
+    <img src="https://avatars.githubusercontent.com/u/77744383?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Varad Vinayak pandey</b></sub></a><br />
 	</td>
 
 </table>
