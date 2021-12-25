@@ -8,7 +8,7 @@ vox_1:
     init_pose_yaw: 0.0
 vox_2:
   map_merge:
-    init_pose_x: -24.0
+    init_pose_x: 20.0
     init_pose_y: -24.0
     init_pose_z: 0.0
     init_pose_roll: 0.0
@@ -16,24 +16,24 @@ vox_2:
     init_pose_yaw: 0.0
 vox_3:
   map_merge:
-    init_pose_x: 24.0
-    init_pose_y: 24.0
+    init_pose_x: 16.0
+    init_pose_y: -24.0
     init_pose_z: 0.0
     init_pose_roll: 0.0
     init_pose_pitch: 0.0
     init_pose_yaw: 0.0
 vox_4:
   map_merge:
-    init_pose_x: -24.0
-    init_pose_y: 24.0
+    init_pose_x: 12.0
+    init_pose_y: -24.0
     init_pose_z: 0.0
     init_pose_roll: 0.0
     init_pose_pitch: 0.0
     init_pose_yaw: 0.0
 vox_5:
   map_merge:
-    init_pose_x: 0.0
-    init_pose_y: 24.0
+    init_pose_x: 8.0
+    init_pose_y: -24.0
     init_pose_z: 0.0
     init_pose_roll: 0.0
     init_pose_pitch: 0.0
