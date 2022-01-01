@@ -29,7 +29,7 @@ we have used [multirobot_map_merge](http://wiki.ros.org/multirobot_map_merge) wi
 
 We have used [polygon_planner](https://github.com/ethz-asl/polygon_coverage_planning) for planning the boustrophedon path.
 
-The rest is custom implemented with fortuners algorithm used for computing voronoi diagram. More detail can be found in our proposal [PDF](media/proposal.pdf).
+The rest is custom implemented with fortuners algorithm used for computing voronoi diagram. More detail can be found in our proposal [PDF](https://drive.google.com/file/d/1JusOGQFmkjaVjfD4kQLPCjKfHKlH5u1N/preview).
 
 Below are a brief result that is not present in the proposal
 ### Mapping 
