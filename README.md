@@ -1,7 +1,7 @@
 # Vox-Bot
 
 ```diff
-- This repo contains only the base platform and the distibuted navigation stack and the mapping
+- This repo contains only the base platform and the distibuted navigation stack and the mapping planner
 ```
 
 ROS package for multi robot platform, Vox-Bot , its main purpose is cleaning and mapping in unknown terrains. A full description about VoxBot can be found here <a href="#desciption">Description</a>. This is our solution submitted for AIITRA robotics challenge 2021, where we secured second position among all other IIT s and prestigious colleges of India.
